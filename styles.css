@@ -1,0 +1,14 @@
+.hidden {
+    display: none;
+  }
+
+  img {
+      height: 200px;
+      width: auto;
+      border: 3px solid black;
+      margin: 3px;
+  }
+
+  .noBreed {
+      color:red;
+  }
