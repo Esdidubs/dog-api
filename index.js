@@ -51,13 +51,14 @@ function getImages(url) {
     // Displays an error if the breed isn't found.
     if(responseJson.status === "error"){
         $('.noBreed').removeClass('hidden');
+    } else {
+      // Replaces the existing HTML with image
+      $('.results-img').replaceWith(
+        `<img src="${responseJson.message}" class="results-img">`
+      )
+      // Unihides the image
+      $('.results').removeClass('hidden');
     }
-    // Replaces the existing HTML with image
-    $('.results-img').replaceWith(
-      `<img src="${responseJson.message}" class="results-img">`
-    )
-    // Unihides the image
-    $('.results').removeClass('hidden');
   }
 
 // These are the 3 form events from the 3 apps
